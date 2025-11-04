@@ -1,4 +1,4 @@
-
+Wrzucił Pan do repozytorium kartotekę build. Proszę ją usunąć. 
 
 # House 2/2
 
