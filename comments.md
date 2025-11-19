@@ -28,3 +28,7 @@ Wrzucił Pan do repozytorium kartotekę build. Proszę ją usunąć.
 # Resize 8/8
 
 12.11.2025 10:00:00 OK
+
+# Zoom 10/10
+
+17.11.2025 11:08:44 OK
