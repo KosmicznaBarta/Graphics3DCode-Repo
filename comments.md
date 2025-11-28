@@ -32,3 +32,9 @@ Wrzucił Pan do repozytorium kartotekę build. Proszę ją usunąć.
 # Zoom 10/10
 
 17.11.2025 11:08:44 OK
+
+# Camera movement 15/15
+
+24.11.2025 10:21:17 OK
+Ale LBM_pressed powinien być ustawiony na false w konstruktorze. 
+
