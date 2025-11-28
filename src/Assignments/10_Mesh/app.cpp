@@ -1,8 +1,3 @@
-//
-// Created by pbialas on 25.09.2020.
-//
-
-
 #include "app.h"
 
 #include <vector>
@@ -26,13 +21,6 @@
 #include "Engine/Mesh.h"
 
 void SimpleShapeApplication::init() {
-    /*
-     * A utility function that reads the shaders' source files, compiles them and creates the program object,
-     * as everything in OpenGL we reference the program by an integer "handle".
-     * The input to this function is a map that associates a shader type (GL_VERTEX_SHADER and GL_FRAGMENT_SHADER) with
-     * its source file. The source files are located in the PROJECT_DIR/shaders directory, where  PROJECT_DIR is the
-     * current assignment directory (e.g., src/Assignments/Triangle).
-     */
     auto program = xe::utils::create_program(
             {
                     {GL_VERTEX_SHADER,   std::string(PROJECT_DIR) + "/shaders/base_vs.glsl"},
@@ -90,13 +78,6 @@ void SimpleShapeApplication::init() {
             -0.5f, -0.5f, 0.0f, 1, 1, 0,
             0.5f, -0.5f, 0.0f, 1, 1, 0
         };
-   
-    /*
-     * All the calls to the OpenGL API are "encapsulated" in the OGL_CALL macro for debugging purposes as explained in
-     * Assignments/DEBUGGING.md. The macro is defined in src/Application/utils.h. If the call to the OpenGL API returns an
-     * error code, the macro will print the name of the function that failed, the file and line number where the error
-     * occurred.
-     */
 
     // Mesh
     // 1. The stride in the vertex buffer, i.e., the size of the single vertex data(attributes) in bytes.
@@ -124,7 +105,6 @@ void SimpleShapeApplication::init() {
     add_mesh(pyramid);
 
     // Setting the background color of the rendering window,
-    // I suggest not using white or black for better debugging.
     OGL_CALL(glClearColor(0.81f, 0.81f, 0.8f, 1.0f));
 
     OGL_CALL(glViewport(0, 0, w, h));
