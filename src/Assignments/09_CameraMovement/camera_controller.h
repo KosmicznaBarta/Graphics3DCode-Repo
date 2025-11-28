@@ -43,5 +43,5 @@ class CameraController {
        float scale_ = 0.01;
        float x_;
        float y_;
-       bool LMB_pressed_;
+       bool LMB_pressed_ = false;
 };
