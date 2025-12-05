@@ -38,3 +38,6 @@ Wrzucił Pan do repozytorium kartotekę build. Proszę ją usunąć.
 24.11.2025 10:21:17 OK
 Ale LBM_pressed powinien być ustawiony na false w konstruktorze. 
 
+# Mesh  12/12
+
+1.12.2025 10:15:51 OK
