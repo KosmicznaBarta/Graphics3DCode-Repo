@@ -41,3 +41,8 @@ Ale LBM_pressed powinien być ustawiony na false w konstruktorze.
 # Mesh  12/12
 
 1.12.2025 10:15:51 OK
+
+# Kd material  20/20
+
+8.12.2025 10:50:12 OK
+
