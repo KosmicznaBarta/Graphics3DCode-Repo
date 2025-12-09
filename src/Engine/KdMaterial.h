@@ -10,6 +10,7 @@ namespace xe {
     class KdMaterial : public AbstractMaterial<KdMaterial> {
         public:
             KdMaterial(const glm::vec4 &Kd);
+            KdMaterial(const glm::vec4 &Kd , int use_colors);
 
             static void init();
 
@@ -19,6 +20,6 @@ namespace xe {
 
         private:
             glm::vec4 Kd_;
-            mutable int use_vertex_colors_;
+            int use_vertex_colors_;
     };
 }

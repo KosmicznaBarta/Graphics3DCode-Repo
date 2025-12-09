@@ -8,6 +8,7 @@
 
 namespace xe {
     KdMaterial::KdMaterial(const glm::vec4 &Kd ) : Kd_(Kd), use_vertex_colors_(false) {}
+    KdMaterial::KdMaterial(const glm::vec4 &Kd, int use_colors) : Kd_(Kd), use_vertex_colors_(use_colors) {}
 
     void KdMaterial::init() {
         create_material_uniform_buffer(2*sizeof(glm::vec4));

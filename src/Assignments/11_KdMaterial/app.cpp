@@ -28,11 +28,16 @@ void SimpleShapeApplication::init() {
     // KdMaterial
     xe::KdMaterial::init();
 
-    auto kd_green_material = new xe::KdMaterial(glm::vec4(0.0f, 1.0f, 0.0f, 1.0f));
-    auto kd_blue_material = new xe::KdMaterial(glm::vec4(0.0f, 0.0f, 1.0f, 1.0f));
-    auto kd_red_material = new xe::KdMaterial(glm::vec4(1.0f, 0.0f, 0.0f, 1.0f));
-    auto kd_yellow_material = new xe::KdMaterial(glm::vec4(1.0f, 1.0f, 0.0f, 1.0f));
-    auto kd_white_material = new xe::KdMaterial(glm::vec4(1.0f, 1.0f, 1.0f, 1.0f));
+    // auto kd_green_material = new xe::KdMaterial(glm::vec4(0.0f, 1.0f, 0.0f, 1.0f));
+    // auto kd_blue_material = new xe::KdMaterial(glm::vec4(0.0f, 0.0f, 1.0f, 1.0f));
+    // auto kd_red_material = new xe::KdMaterial(glm::vec4(1.0f, 0.0f, 0.0f, 1.0f));
+    // auto kd_yellow_material = new xe::KdMaterial(glm::vec4(1.0f, 1.0f, 0.0f, 1.0f));
+    // auto kd_white_material = new xe::KdMaterial(glm::vec4(1.0f, 1.0f, 1.0f, 1.0f));
+    auto kd_green_material = new xe::KdMaterial(glm::vec4(0.0f, 1.0f, 0.0f, 1.0f),1);
+    auto kd_blue_material = new xe::KdMaterial(glm::vec4(0.0f, 0.0f, 1.0f, 1.0f),1);
+    auto kd_red_material = new xe::KdMaterial(glm::vec4(1.0f, 0.0f, 0.0f, 1.0f),1);
+    auto kd_yellow_material = new xe::KdMaterial(glm::vec4(1.0f, 1.0f, 0.0f, 1.0f),1);
+    auto kd_white_material = new xe::KdMaterial(glm::vec4(1.0f, 1.0f, 1.0f, 1.0f),1);
 
     // Camera and Controller
     set_camera(new xe::Camera);
