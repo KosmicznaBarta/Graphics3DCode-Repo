@@ -42,7 +42,9 @@ Ale LBM_pressed powinien być ustawiony na false w konstruktorze.
 
 1.12.2025 10:15:51 OK
 
-# Kd material  15/20
+# Kd material  20/20
+
+15.12.2025 10:37:55 OK
 
 8.12.2025 10:23:33 OK
 Brak możliwośći ustawienia use_vertex colors w konstruktorze. Dlaczegi jest to mutable?
