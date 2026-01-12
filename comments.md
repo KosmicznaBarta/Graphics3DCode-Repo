@@ -48,3 +48,9 @@ Ale LBM_pressed powinien być ustawiony na false w konstruktorze.
 
 8.12.2025 10:23:33 OK
 Brak możliwośći ustawienia use_vertex colors w konstruktorze. Dlaczegi jest to mutable?
+
+# Textures 15/15
+
+12.01.2026 10:36:38 OK
+
+
