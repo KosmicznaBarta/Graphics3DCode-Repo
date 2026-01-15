@@ -5,6 +5,7 @@
 #include <glad/gl.h>
 #include <glm/glm.hpp>
 #include "spdlog/spdlog.h"
+#include "ObjectReader/sMesh.h"
 
 namespace xe {
     class KdMaterial : public AbstractMaterial<KdMaterial> {
@@ -17,6 +18,10 @@ namespace xe {
             void bind() const override;
 
             void unbind() const override;
+
+            static Material *create_from_mtl(const mtl_material_t &mat, std::string mtl_dir);
+
+            void set_texture(GLint texture);
 
         private:
             glm::vec4 Kd_;
