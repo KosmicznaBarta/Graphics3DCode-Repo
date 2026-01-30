@@ -1,0 +1,14 @@
+newmtl SilverSand
+Ns 200.0
+Ka 0.7490 0.7569 0.7601
+Kd 0.7490 0.7569 0.7601
+Ks 0.0 0.0 0.0
+illum 1
+
+newmtl Texture
+Kd 1.0 1.0 1.0
+illum 1
+
+newmtl Phong
+Kd 1.0 1.0 1.0
+illum 1
