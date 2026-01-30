@@ -53,4 +53,8 @@ Brak możliwośći ustawienia use_vertex colors w konstruktorze. Dlaczegi jest t
 
 12.01.2026 10:36:38 OK
 
+# OBJ reader 
+
+19.01.2026 12:57:34 OK
+
 
