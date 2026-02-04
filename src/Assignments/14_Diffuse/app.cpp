@@ -63,7 +63,7 @@ void SimpleShapeApplication::init() {
 
     OGL_CALL(glCreateBuffers(2, &u_light_buffer_handle_));
     // ambient + padding as glm::vec4 and n_lights + padding as sizeof(int) 
-    OGL_CALL(glNamedBufferData(u_light_buffer_handle_, sizeof(glm::vec4) + 4*sizeof(int) + xe::MAX_POINT_LIGHTS*sizeof(xe::PointLight), NULL, GL_DYNAMIC_DRAW));
+    OGL_CALL(glNamedBufferData(u_light_buffer_handle_, sizeof(glm::vec4) + 3*sizeof(float) + xe::MAX_POINT_LIGHTS*sizeof(xe::PointLight), NULL, GL_DYNAMIC_DRAW));
 
     // PointLight(const glm::vec3 &pos, const glm::vec3 &color, float intensity, float radius) : position(pos), color(color), intensity(intensity), radius(radius) {}
     add_light(xe::PointLight(glm::vec3(0, 0, 1), glm::vec3(1, 1, 1), 1.0, 0.1));
@@ -136,7 +136,7 @@ void SimpleShapeApplication::frame() {
     OGL_CALL(glNamedBufferSubData(u_trans_buffer_handle_, 2*sizeof(glm::mat4) + 4*sizeof(float), 4*sizeof(float), &VM_Normal[1]));
     OGL_CALL(glNamedBufferSubData(u_trans_buffer_handle_, 2*sizeof(glm::mat4) + 8*sizeof(float), 4*sizeof(float), &VM_Normal[2]));
     OGL_CALL(glNamedBufferSubData(u_light_buffer_handle_, 0, 3*sizeof(float), &ambient[0]));
-    OGL_CALL(glNamedBufferSubData(u_light_buffer_handle_, 4*sizeof(float), sizeof(int), &n_lights));
+    OGL_CALL(glNamedBufferSubData(u_light_buffer_handle_, 4*sizeof(float), 3*sizeof(float), &n_lights));
 
     struct GPULight {
         glm::vec4 pos_radius;
@@ -145,7 +145,7 @@ void SimpleShapeApplication::frame() {
 
     for(int i = 0; i < n_lights; i++) {
         xe::PointLight light = xe::transform(lights_[i], camera() -> view());
-        OGL_CALL(glNamedBufferSubData(u_light_buffer_handle_, 4*sizeof(float) + sizeof(int) + i*sizeof(xe::PointLight), sizeof(xe::PointLight), &light));  
+        OGL_CALL(glNamedBufferSubData(u_light_buffer_handle_, 4*sizeof(float) + 3*sizeof(float) + i*sizeof(xe::PointLight), sizeof(xe::PointLight), &light));  
     }
 
     glEnable(GL_DEPTH_TEST);
