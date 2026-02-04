@@ -57,4 +57,7 @@ Brak możliwośći ustawienia use_vertex colors w konstruktorze. Dlaczegi jest t
 
 19.01.2026 12:57:34 OK
 
+# Diffuse 0/25
 
+4.02.2026 11:40:39
+Złe offsety przy przesyłaniu swiatla. n_light ma offset 3*sizeof(float).
