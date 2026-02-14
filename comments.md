@@ -59,5 +59,11 @@ Brak możliwośći ustawienia use_vertex colors w konstruktorze. Dlaczegi jest t
 
 # Diffuse 0/25
 
+14.02.2026 11:38:07 
+Offsety przy swiatlach są dalej zle. Upakowanie w bufurze powinno wygladac tak:
+
+|A_r|A_g|A_b|n_lights|l[0]_x|l[0]_y|l[0]_z|l[0]_radius|l[0]_r|l[0]_g|l[0]_b|l[0]_intensity|....
+
+
 4.02.2026 11:40:39
 Złe offsety przy przesyłaniu swiatla. n_light ma offset 3*sizeof(float).
