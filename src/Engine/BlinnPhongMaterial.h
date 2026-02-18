@@ -12,6 +12,8 @@ namespace xe {
         public:
             BlinnPhongMaterial(const glm::vec4 &Ka, const glm::vec4 &Kd, int use_colors);
             BlinnPhongMaterial(const glm::vec4 &Ka, const glm::vec4 &Kd, int use_colors, int texture);
+            BlinnPhongMaterial(const glm::vec4 &Ka, const glm::vec4 &Kd, const glm::vec3 &Ks, float Ns, int use_colors);
+            BlinnPhongMaterial(const glm::vec4 &Ka, const glm::vec4 &Kd, const glm::vec3 &Ks, float Ns, int use_colors, int texture);
 
             static void init();
 
@@ -26,6 +28,8 @@ namespace xe {
         private:
             glm::vec4 Kd_;
             glm::vec4 Ka_;
+            glm::vec3 Ks_;
+            float Ns_;
             int use_vertex_colors_;
             static GLint map_Kd_location_;
             GLint texture_;
