@@ -57,7 +57,9 @@ Brak możliwośći ustawienia use_vertex colors w konstruktorze. Dlaczegi jest t
 
 19.01.2026 12:57:34 OK
 
-# Diffuse 0/25
+# Diffuse 25/25
+
+20.02.2026 13:52:52 OK
 
 14.02.2026 11:38:07 
 Offsety przy swiatlach są dalej zle. Upakowanie w bufurze powinno wygladac tak:
@@ -67,3 +69,9 @@ Offsety przy swiatlach są dalej zle. Upakowanie w bufurze powinno wygladac tak:
 
 4.02.2026 11:40:39
 Złe offsety przy przesyłaniu swiatla. n_light ma offset 3*sizeof(float).
+
+
+# Specular 12/12
+
+20.02.2026 13:53:01 OK
+
